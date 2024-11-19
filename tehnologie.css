@@ -1,0 +1,197 @@
+@import "https://fonts.googleapis.com/css?family=Press%20Start%202P";
+@media screen and (max-width:600px){
+    .sticky-nav, section, article{
+        width: 100%;
+    }
+}
+
+*{
+   box-sizing: border-box;
+}
+body{
+  background-color: black;
+}
+ 
+ h1 {
+   display:table;
+   margin:auto;
+ }
+ /* DROPDOWN MENU */
+
+ .dropdown{
+    display: inline-block;
+    font-family: 'Press Start 2P';
+ }
+ .dropdown button{
+    background-color: #070700;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Press Start 2P';
+    border-radius: 10px;
+ }
+
+ .dropdown a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+ }
+ 
+ .dropdown .content{
+    display: none;
+    position: absolute;
+    background-color: hsl(60, 98%, 48%);
+    min-width: 100px;
+    box-shadow: 2px 2px 5px black;
+    border-radius: 10px;
+
+ }
+
+ .dropdown:hover .content{
+    display:block;
+    z-index: 999;
+ }
+
+ .dropdown:hover button{
+    background-color: hsl(60, 98%, 48%);
+    color: black;
+ }
+
+ .dropdown a:hover{
+    color: white;
+ }
+
+ /* HEADERS, SECTION, ARTICLE, FOOTER*/
+ header{
+    text-align: center;
+    font-family: 'Press Start 2P';
+    font-size: 0.8em;
+    color: yellow;
+ }
+
+ section{
+   width: 60%;
+   float: left;
+   padding: 10px;
+   border-left: 2px solid grey;
+   border-right: 2px solid grey;
+   font-family: 'Amatic SC', cursive;
+   color: white;
+  }
+
+ h2{
+  font-family: 'Press Start 2P';
+  font-size: 0.5 em;
+  color: yellow;
+}
+
+ article{
+   width: 25%;
+   float: left;
+   padding: 10px;
+   font-family: 'Amatic SC', cursive;
+   color: white;
+  }
+
+ footer{
+   border-top: 2px solid grey;
+   display: block;
+   clear: both;
+   text-align: center;
+   font-family: 'Amatic SC', cursive;
+   font-size: 0.5em; 
+   color: white;
+   
+ }
+
+ /* NAVBAR */
+ .sticky-nav{
+   position: sticky;
+   top: 0;
+   width: 15%;
+   float: left;
+   padding: 10px;
+   overflow: clip;
+ }
+
+ .sticky-nav a{
+   color: white;
+   font-family: 'Amatic SC', cursive;
+   font-style: italic;
+ }
+
+ ul{
+  color: white;
+ }
+
+ .sticky-nav h2{
+   font-size: 100%;
+ }
+
+/*TITLU ANIMAT*/
+ .animated-text{
+  font-size: 2em;
+  font-weight: 400;
+  min-width: 280px;
+}
+
+.animated-text span{
+  position: relative;
+}
+
+.animated-text span::before{
+  content: "Tehnologii Revoluționare în Gaming";
+  color: yellow;
+  animation: words 20s infinite;
+}
+
+.animated-text span::after{
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  background-color: black;
+  border-left: 2px solid white;
+  right: -8px;
+  animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+  to{
+      border-left: 2px solid #ff7f5000;
+  }
+}
+
+@keyframes words {
+  0%,20%{
+    content: "Tehnologii Revoluționare în Gaming";
+}
+21%,40%{
+    content: "Tehnologii Revoluționare în Gaming";
+}
+41%,60%{
+    content: "Tehnologii Revoluționare în Gaming";
+}
+61%,80%{
+    content: "Tehnologii Revoluționare în Gaming";
+}
+81%,100%{
+    content: "Tehnologii Revoluționare în Gaming";
+}
+
+}
+
+@keyframes typing {
+  10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+      width: 0;
+  }
+  5%,20%,25%,40%,45%,60%,65%,80%,85%{
+      width: calc(100% + 8px);
+  }
+} 
+
+img.rounded-corners{
+  border-radius: 30px;
+}
